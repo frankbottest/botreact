@@ -7,6 +7,23 @@
     overflow-y: auto;
   }
   
+  .article h2 {
+    margin-top: 20px;
+  }
+  
+  .article p {
+    margin-bottom: 20px;
+  }
+  
+  .article a {
+    color: #d4af37;
+    text-decoration: none;
+  }
+  
+  .article a:hover {
+    text-decoration: underline;
+  }
+  
   .back-button {
     display: inline-block;
     margin-bottom: 20px;
@@ -21,4 +38,3 @@
     background-color: #d4af37;
     color: black;
   }
-  

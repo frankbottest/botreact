@@ -1,13 +1,13 @@
 /* src/components/ExchangeArticles.css */
 .exchange-articles {
-    text-align: center;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 60px; /* Оставляем место для меню */
-    overflow-y: auto;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 60px; /* Оставляем место для меню */
+  overflow-y: auto;
   }
   
-  .back-button {
+ .back-button {
     display: inline-block;
     margin-bottom: 20px;
     color: #d4af37;
@@ -39,4 +39,3 @@
   li a:hover {
     text-decoration: underline;
   }
-  

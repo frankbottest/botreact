@@ -3,13 +3,18 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './ExchangeArticles.css';
 
+const articlesData = {
+  bybit: [
+    { id: 1, title: 'Как зарегистрироваться на Bybit' }
+  ],
+  bingx: [],
+  okx: [],
+  binance: []
+};
+
 function ExchangeArticles() {
   const { exchange } = useParams();
-  const articles = [
-    { id: 1, title: 'Article 1' },
-    { id: 2, title: 'Article 2' },
-    { id: 3, title: 'Article 3' },
-  ];
+  const articles = articlesData[exchange] || [];
 
   return (
     <div className="exchange-articles">
