@@ -1,4 +1,3 @@
-// src/components/Menu.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaChartLine, FaBook, FaExchangeAlt, FaBookOpen } from 'react-icons/fa';
