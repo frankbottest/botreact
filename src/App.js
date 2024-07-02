@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Trading from './components/Trading';
 import Learning from './components/Learning';
@@ -17,16 +17,16 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/botreact">
       <div className="App">
         <Menu />
-        <Switch>
-          <Route path="/trading" component={Trading} />
-          <Route path="/learning" component={Learning} />
-          <Route path="/exchanges" component={Exchanges} />
-          <Route path="/glossary" component={Glossary} />
-          <Route path="/" component={Home} />
-        </Switch>
+        <Routes>
+          <Route path="/trading" element={<Trading />} />
+          <Route path="/learning" element={<Learning />} />
+          <Route path="/exchanges" element={<Exchanges />} />
+          <Route path="/glossary" element={<Glossary />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
       </div>
     </Router>
   );

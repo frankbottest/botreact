@@ -1,31 +1,32 @@
+// src/components/Menu.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FaHome, FaChartLine, FaBook, FaExchangeAlt, FaBookOpen } from 'react-icons/fa';
 import './Menu.css';
 
 function Menu() {
   return (
     <div className="menu">
-      <Link to="/" className="menu-item">
+      <NavLink to="/" className="menu-item" activeClassName="active" exact>
         <FaHome />
         <span>Главная</span>
-      </Link>
-      <Link to="/trading" className="menu-item">
+      </NavLink>
+      <NavLink to="/trading" className="menu-item" activeClassName="active">
         <FaChartLine />
         <span>Трейдинг</span>
-      </Link>
-      <Link to="/learning" className="menu-item">
+      </NavLink>
+      <NavLink to="/learning" className="menu-item" activeClassName="active">
         <FaBook />
         <span>Обучение</span>
-      </Link>
-      <Link to="/exchanges" className="menu-item">
+      </NavLink>
+      <NavLink to="/exchanges" className="menu-item" activeClassName="active">
         <FaExchangeAlt />
         <span>Биржи</span>
-      </Link>
-      <Link to="/glossary" className="menu-item">
+      </NavLink>
+      <NavLink to="/glossary" className="menu-item" activeClassName="active">
         <FaBookOpen />
         <span>Словарь</span>
-      </Link>
+      </NavLink>
     </div>
   );
 }

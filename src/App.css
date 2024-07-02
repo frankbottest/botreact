@@ -1,38 +1,44 @@
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #121212; /* Темный фон */
+  color: white;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1e1e1e;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000; /* Меню всегда наверху */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: gray; /* Серый цвет для неактивных вкладок */
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-item.active {
+  color: #d4af37; /* Премиум-золотой для активной вкладки */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-item span {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.menu-item:hover {
+  color: #f0c674;
 }
