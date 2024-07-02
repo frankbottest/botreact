@@ -69,7 +69,7 @@ function Glossary() {
             <h2 className="letter-divider">{letter}</h2>
             <div className="term-list">
               {groupedTerms[letter].map((term, index) => (
-                <div key={index} className="term">
+                <div key={index} className="glossary-term">
                   <Link to={`/glossary/${term.id}`}>{term.term}</Link>
                 </div>
               ))}
