@@ -19,19 +19,21 @@ function App() {
   }, []);
 
   return (
-    <Router basename="/<REPOSITORY_NAME>">
+    <Router basename="/botreact">
       <div className="App">
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} exact />
+            <Route path="/trading" element={<Trading />} />
+            <Route path="/learning" element={<Learning />} />
+            <Route path="/exchanges" element={<Exchanges />} />
+            <Route path="/exchanges/:exchange" element={<ExchangeArticles />} />
+            <Route path="/exchanges/:exchange/:articleId" element={<Article />} />
+            <Route path="/glossary" element={<Glossary />} />
+            <Route path="*" element={<Navigate to="/" />} /> {/* Добавляем перенаправление для всех неизвестных маршрутов */}
+          </Routes>
+        </div>
         <Menu />
-        <Routes>
-          <Route path="/" element={<Home />} exact />
-          <Route path="/trading" element={<Trading />} />
-          <Route path="/learning" element={<Learning />} />
-          <Route path="/exchanges" element={<Exchanges />} />
-          <Route path="/exchanges/:exchange" element={<ExchangeArticles />} />
-          <Route path="/exchanges/:exchange/:articleId" element={<Article />} />
-          <Route path="/glossary" element={<Glossary />} />
-          <Route path="*" element={<Navigate to="/" />} /> {/* Добавляем перенаправление для всех неизвестных маршрутов */}
-        </Routes>
       </div>
     </Router>
   );
