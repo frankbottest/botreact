@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './components/Home';
 import Trading from './components/Trading';
 import Learning from './components/Learning';
@@ -19,17 +19,18 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/<REPOSITORY_NAME>">
       <div className="App">
         <Menu />
         <Routes>
+          <Route path="/" element={<Home />} exact />
           <Route path="/trading" element={<Trading />} />
           <Route path="/learning" element={<Learning />} />
           <Route path="/exchanges" element={<Exchanges />} />
           <Route path="/exchanges/:exchange" element={<ExchangeArticles />} />
           <Route path="/exchanges/:exchange/:articleId" element={<Article />} />
           <Route path="/glossary" element={<Glossary />} />
-          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Navigate to="/" />} /> {/* Добавляем перенаправление для всех неизвестных маршрутов */}
         </Routes>
       </div>
     </Router>

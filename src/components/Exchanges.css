@@ -1,9 +1,10 @@
 /* src/components/Exchanges.css */
 .exchanges {
+    text-align: center;
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
-    color: white;
     margin-bottom: 60px; /* Оставляем место для меню */
+    overflow-y: auto;
   }
   
   .exchange-buttons {
