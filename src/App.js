@@ -7,6 +7,7 @@ import Exchanges from './components/Exchanges';
 import ExchangeArticles from './components/ExchangeArticles';
 import Article from './components/Article';
 import Glossary from './components/Glossary';
+import Term from './components/Term';
 import Menu from './components/Menu';
 import './App.css';
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/exchanges/:exchange" element={<ExchangeArticles />} />
             <Route path="/exchanges/:exchange/:articleId" element={<Article />} />
             <Route path="/glossary" element={<Glossary />} />
+            <Route path="/glossary/:termId" element={<Term />} />
             <Route path="*" element={<Navigate to="/" />} /> {/* Добавляем перенаправление для всех неизвестных маршрутов */}
           </Routes>
         </div>

@@ -7,3 +7,50 @@
     overflow-y: auto;
   }
   
+  .glossary input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+  }
+  
+  .alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .alphabet button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #1e1e1e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .alphabet button:hover {
+    background-color: #d4af37;
+  }
+  
+  .terms {
+    margin-top: 20px;
+  }
+  
+  .term {
+    margin-bottom: 10px;
+  }
+  
+  .term a {
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .term a:hover {
+    text-decoration: underline;
+  }
