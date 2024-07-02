@@ -41,8 +41,16 @@
     margin-top: 20px;
   }
   
-  .term {
+  .letter-divider {
+    font-size: 18px;
+    color: #d4af37;
+    margin-top: 20px;
     margin-bottom: 10px;
+    border-bottom: 1px solid #d4af37;
+  }
+  
+  .term {
+    margin-bottom: 5px;
   }
   
   .term a {

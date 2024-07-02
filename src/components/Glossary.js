@@ -38,6 +38,15 @@ function Glossary() {
 
   const alphabet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'.split('');
 
+  const groupedTerms = filteredTerms.reduce((acc, term) => {
+    const firstLetter = term.term.charAt(0).toUpperCase();
+    if (!acc[firstLetter]) {
+      acc[firstLetter] = [];
+    }
+    acc[firstLetter].push(term);
+    return acc;
+  }, {});
+
   return (
     <div className="glossary">
       <h1>Словарь</h1>
@@ -55,9 +64,14 @@ function Glossary() {
         ))}
       </div>
       <div className="terms">
-        {filteredTerms.map((term, index) => (
-          <div key={index} className="term">
-            <Link to={`/glossary/${term.id}`}>{term.term}</Link>
+        {Object.keys(groupedTerms).sort().map(letter => (
+          <div key={letter}>
+            <h2 className="letter-divider">{letter}</h2>
+            {groupedTerms[letter].map((term, index) => (
+              <div key={index} className="term">
+                <Link to={`/glossary/${term.id}`}>{term.term}</Link>
+              </div>
+            ))}
           </div>
         ))}
       </div>
