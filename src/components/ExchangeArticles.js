@@ -1,20 +1,16 @@
 // src/components/ExchangeArticles.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './ExchangeArticles.css';
-
-const articlesData = {
-  bybit: [
-    { id: 1, title: 'Как зарегистрироваться на Bybit' }
-  ],
-  bingx: [],
-  okx: [],
-  binance: []
-};
+import articlesData from '../data/articles.json';
 
 function ExchangeArticles() {
   const { exchange } = useParams();
-  const articles = articlesData[exchange] || [];
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    setArticles(articlesData[exchange] || []);
+  }, [exchange]);
 
   return (
     <div className="exchange-articles">
