@@ -4,6 +4,8 @@ import Home from './components/Home';
 import Trading from './components/Trading';
 import Learning from './components/Learning';
 import Exchanges from './components/Exchanges';
+import ExchangeArticles from './components/ExchangeArticles';
+import Article from './components/Article';
 import Glossary from './components/Glossary';
 import Menu from './components/Menu';
 import './App.css';
@@ -17,13 +19,15 @@ function App() {
   }, []);
 
   return (
-    <Router basename="/botreact">
+    <Router>
       <div className="App">
         <Menu />
         <Routes>
           <Route path="/trading" element={<Trading />} />
           <Route path="/learning" element={<Learning />} />
           <Route path="/exchanges" element={<Exchanges />} />
+          <Route path="/exchanges/:exchange" element={<ExchangeArticles />} />
+          <Route path="/exchanges/:exchange/:articleId" element={<Article />} />
           <Route path="/glossary" element={<Glossary />} />
           <Route path="/" element={<Home />} />
         </Routes>
