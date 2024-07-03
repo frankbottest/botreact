@@ -9,6 +9,9 @@ import Article from './components/Article';
 import Glossary from './components/Glossary';
 import Term from './components/Term';
 import Menu from './components/Menu';
+import LessonList from './components/LessonList';
+import Lesson from './components/Lesson';
+import Test from './components/Test';
 import './App.css';
 
 function App() {
@@ -27,6 +30,9 @@ function App() {
             <Route path="/" element={<Home />} exact />
             <Route path="/trading" element={<Trading />} />
             <Route path="/learning" element={<Learning />} />
+            <Route path="/learning/lessons" element={<LessonList />} />
+            <Route path="/learning/lessons/:lessonId" element={<Lesson />} />
+            <Route path="/learning/lessons/:lessonId/test" element={<Test />} />
             <Route path="/exchanges" element={<Exchanges />} />
             <Route path="/exchanges/:exchange" element={<ExchangeArticles />} />
             <Route path="/exchanges/:exchange/:articleId" element={<Article />} />
