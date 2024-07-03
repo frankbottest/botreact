@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import testsData from '../data/tests.json';
 import './Test.css';
 
 function Test() {
   const { lessonId } = useParams();
   const navigate = useNavigate();
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedOption, setSelectedOption] = useState('');
+  const [score, setScore] = useState(0);
+
+  const questions = testsData[lessonId];
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  const handleNextQuestion = () => {
+    if (selectedOption === questions[currentQuestionIndex].answer) {
+      setScore(score + 1);
+    }
+    setSelectedOption('');
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      handleTestCompletion();
+    }
+  };
 
   const handleTestCompletion = () => {
     // Обновляем прогресс пользователя
@@ -20,8 +42,21 @@ function Test() {
   return (
     <div className="test">
       <h1>Тест по уроку {lessonId}</h1>
-      <p>Тестовое задание...</p>
-      <button onClick={handleTestCompletion}>Завершить тест</button>
+      <p>{questions[currentQuestionIndex].question}</p>
+      {questions[currentQuestionIndex].options.map((option, index) => (
+        <label key={index}>
+          <input
+            type="radio"
+            value={option}
+            checked={selectedOption === option}
+            onChange={handleOptionChange}
+          />
+          {option}
+        </label>
+      ))}
+      <button onClick={handleNextQuestion}>
+        {currentQuestionIndex < questions.length - 1 ? 'Следующий вопрос' : 'Завершить тест'}
+      </button>
     </div>
   );
 }
