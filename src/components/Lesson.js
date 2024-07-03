@@ -1,10 +1,11 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import lessonsData from '../data/lessons.json';
 import './Lesson.css';
 
 function Lesson() {
   const { lessonId } = useParams();
+  const navigate = useNavigate();
   const lesson = lessonsData.find(lesson => lesson.id === parseInt(lessonId));
 
   if (!lesson) {
@@ -13,8 +14,9 @@ function Lesson() {
 
   return (
     <div className="lesson">
+      <button className="back-button" onClick={() => navigate(-1)}>Назад</button>
       <h1>{lesson.title}</h1>
-      <p>{lesson.content}</p>
+      <div className="lesson-content" dangerouslySetInnerHTML={{ __html: lesson.content }} />
       <Link to={`/learning/lessons/${lessonId}/test`} className="test-button">Пройти тест</Link>
     </div>
   );

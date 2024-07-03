@@ -2,6 +2,11 @@
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
     color: white;
+    text-align: left;
+  }
+  
+  .lesson-content {
+    margin-bottom: 20px;
   }
   
   .test-button {
@@ -17,6 +22,22 @@
   }
   
   .test-button:hover {
+    background-color: #d4af37;
+    color: black;
+  }
+  
+  /* Добавляем стили для кнопок "Назад" */
+  .back-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
     background-color: #d4af37;
     color: black;
   }
