@@ -40,16 +40,18 @@ function Test() {
   };
 
   return (
-    <div className="test">
+    <div className="test-page">
+      <button className="back-button" onClick={() => navigate(-1)}>Назад</button>
       <h1>Тест по уроку {lessonId}</h1>
       <p>{questions[currentQuestionIndex].question}</p>
       {questions[currentQuestionIndex].options.map((option, index) => (
-        <label key={index}>
+        <label key={index} className="option-label">
           <input
             type="radio"
             value={option}
             checked={selectedOption === option}
             onChange={handleOptionChange}
+            className="option-input"
           />
           {option}
         </label>

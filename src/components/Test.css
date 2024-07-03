@@ -1,10 +1,10 @@
-.test {
+.test-page {
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
     color: white;
   }
   
-  .test button {
+  .test-page button {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
@@ -15,8 +15,33 @@
     text-align: center;
   }
   
-  .test button:hover {
+  .test-page button:hover {
     background-color: #4CAF50;
+    color: black;
+  }
+  
+  .option-label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .option-input {
+    margin-right: 10px;
+  }
+  
+  /* Добавляем стили для кнопок "Назад" */
+  .back-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #d4af37;
     color: black;
   }
   
