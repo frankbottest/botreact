@@ -36,6 +36,7 @@ function App() {
           </Routes>
         </div>
         <Menu />
+        <div className="footer-fill"></div> {/* Добавляем заливку под меню */}
       </div>
     </Router>
   );

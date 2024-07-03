@@ -24,7 +24,7 @@ body {
   background-color: #1e1e1e;
   padding: 10px 0;
   position: fixed;
-  bottom: 0;
+  bottom: 20px; /* Поднимаем меню выше */
   width: 100%;
   z-index: 1000; /* Меню всегда наверху */
 }
@@ -49,4 +49,14 @@ body {
 
 .menu-item:hover {
   color: #f0c674;
+}
+
+/* Заливка под меню */
+.footer-fill {
+  background-color: #1e1e1e;
+  height: 20px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 999; /* Ниже чем меню */
 }
