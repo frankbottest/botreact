@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/botreact/static/css/main.83b61425.css",
-    "main.js": "/botreact/static/js/main.7b4e2169.js",
+    "main.css": "/botreact/static/css/main.509e2034.css",
+    "main.js": "/botreact/static/js/main.3492819e.js",
     "static/js/453.afd2f2a8.chunk.js": "/botreact/static/js/453.afd2f2a8.chunk.js",
     "index.html": "/botreact/index.html",
-    "main.83b61425.css.map": "/botreact/static/css/main.83b61425.css.map",
-    "main.7b4e2169.js.map": "/botreact/static/js/main.7b4e2169.js.map",
+    "main.509e2034.css.map": "/botreact/static/css/main.509e2034.css.map",
+    "main.3492819e.js.map": "/botreact/static/js/main.3492819e.js.map",
     "453.afd2f2a8.chunk.js.map": "/botreact/static/js/453.afd2f2a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.83b61425.css",
-    "static/js/main.7b4e2169.js"
+    "static/css/main.509e2034.css",
+    "static/js/main.3492819e.js"
   ]
 }
