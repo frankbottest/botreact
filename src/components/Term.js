@@ -11,11 +11,11 @@ function Term() {
     .find(term => term.id === parseInt(termId));
 
   if (!term) {
-    return <div className="term-page"><h1>Термин не найден</h1></div>;
+    return <div className="container term-page"><h1>Термин не найден</h1></div>;
   }
 
   return (
-    <div className="term-page">
+    <div className="container term-page">
       <button className="back-button" onClick={() => navigate(-1)}>Назад</button>
       <h1>{term.term}</h1>
       <p>{term.description}</p>

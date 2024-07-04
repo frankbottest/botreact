@@ -9,11 +9,11 @@ function Article() {
   const article = articlesData[exchange]?.find(a => a.id === parseInt(articleId));
 
   if (!article) {
-    return <div className="article-page"><h1>Статья не найдена</h1></div>;
+    return <div className="container article-page"><h1>Статья не найдена</h1></div>;
   }
 
   return (
-    <div className="article-page">
+    <div className="container article-page">
       <button className="back-button" onClick={() => navigate(-1)}>Назад</button>
       <h1>{article.title}</h1>
       <div className="article-content" dangerouslySetInnerHTML={{ __html: article.content }} />

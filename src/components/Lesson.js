@@ -9,11 +9,11 @@ function Lesson() {
   const lesson = lessonsData.find(lesson => lesson.id === parseInt(lessonId));
 
   if (!lesson) {
-    return <div className="lesson-page"><h1>Урок не найден</h1></div>;
+    return <div className="container"><h1>Урок не найден</h1></div>;
   }
 
   return (
-    <div className="lesson-page">
+    <div className="container lesson-page">
       <button className="back-button" onClick={() => navigate(-1)}>Назад</button>
       <h1>{lesson.title}</h1>
       <div className="lesson-content" dangerouslySetInnerHTML={{ __html: lesson.content }} />

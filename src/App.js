@@ -13,6 +13,7 @@ import LessonList from './components/LessonList';
 import Lesson from './components/Lesson';
 import Test from './components/Test';
 import './App.css';
+import './global.css'; // Импорт глобальных стилей
 
 function App() {
   useEffect(() => {

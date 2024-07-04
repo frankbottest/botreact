@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212; /* Темный фон */
+    color: #ececec; /* Основной цвет текста */
+    overflow: hidden; /* Предотвращаем прокрутку за пределы */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #ececec; /* Цвет заголовков */
+  }
+  
+  p, span {
+    color: rgb(255 255 255 / 75%); /* Цвет текста */
+  }
+  
+  button, .back-button, .test-button, .start-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #1e1e1e; /* Цвет фона кнопок */
+    color: #ececec; /* Цвет текста кнопок */
+    text-decoration: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  button:hover, .back-button:hover, .test-button:hover, .start-button:hover {
+    background-color: #f0c674; /* Цвет при наведении */
+    color: black;
+  }
+  
+  .container {
+    padding: 20px 20px 80px 20px;
+    text-align: left;
+  }
+  
+  /* Стили для меню */
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1e1e1e;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Меню всегда наверху */
+  }
+  
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: gray; /* Серый цвет для неактивных вкладок */
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .menu-item.active {
+    color: #f0c674; /* Премиум-золотой для активной вкладки */
+  }
+  
+  .menu-item span {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  
+  .menu-item:hover {
+    color: #f0c674;
+  }
+  
+  /* Заливка под меню */
+  .footer-fill {
+    background-color: #1e1e1e;
+    height: 60px; /* Высота меню */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 999; /* Ниже чем меню */
+  }
+  
