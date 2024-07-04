@@ -1,45 +1,46 @@
-/* src/components/Home.css */
+@import '../variables.css';
+@import '../global.css';
+
 .home {
-    text-align: center;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 60px; /* Оставляем место для меню */
-    overflow-y: auto;
-  }
-  
-  
-  .home .channel-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .home .links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .home .link-button {
-    display: flex;
-    align-items: center;
-    color: #d4af37; /* Премиум золото */
-    text-decoration: none;
-    font-size: 18px;
-    border: 1px dashed #d4af37;
-    padding: 10px 20px;
-    border-radius: 10px;
-  }
-  
-  .home .link-button:hover {
-    color: #f0c674;
-    border-color: #f0c674;
-  }
-  
-  .home .ad-block {
-    border: 1px dashed #d4af37;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  
+  padding: 20px 20px 80px 20px;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.home-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--button-background-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 45%;
+  justify-content: center;
+}
+
+.home-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px; /* Отступ между иконкой и текстом */
+}
+
+.home-button.youtube {
+  background-color: #FF0000; /* Красный цвет ютуба */
+}
+
+.home-button.telegram {
+  background-color: #0088cc; /* Голубой цвет телеграма */
+}
