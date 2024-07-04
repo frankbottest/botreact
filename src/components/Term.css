@@ -1,33 +1,21 @@
-/* src/components/Term.css */
-.term {
-    text-align: center;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 60px; /* Оставляем место для меню */
-    overflow-y: auto;
-  }
-  
-  .back-button {
-    display: inline-block;
-    margin-bottom: 20px;
-    color: #d4af37;
-    text-decoration: none;
-    border: 1px solid #d4af37;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  .back-button:hover {
-    background-color: #d4af37;
-    color: black;
-  }
-  
-  .term h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .term p {
-    font-size: 16px;
-  }
-  
+.term-page {
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ececec; /* Новый цвет текста */
+  text-align: left;
+}
+
+.back-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+  color: #ececec;
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #d4af37;
+  color: black;
+}

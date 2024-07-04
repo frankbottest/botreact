@@ -1,27 +1,22 @@
-// src/components/Article.js
-import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import './Article.css';
+import React from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import articlesData from '../data/articles.json';
+import './Article.css';
 
 function Article() {
   const { exchange, articleId } = useParams();
-  const [article, setArticle] = useState(null);
-
-  useEffect(() => {
-    const article = (articlesData[exchange] || []).find(a => a.id === parseInt(articleId));
-    setArticle(article);
-  }, [exchange, articleId]);
+  const navigate = useNavigate();
+  const article = articlesData[exchange]?.find(a => a.id === parseInt(articleId));
 
   if (!article) {
-    return <div className="article"><h1>Статья не найдена</h1></div>;
+    return <div className="article-page"><h1>Статья не найдена</h1></div>;
   }
 
   return (
-    <div className="article">
-      <Link to={`/exchanges/${exchange}`} className="back-button">Назад</Link>
+    <div className="article-page">
+      <button className="back-button" onClick={() => navigate(-1)}>Назад</button>
       <h1>{article.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: article.content }} />
+      <div className="article-content" dangerouslySetInnerHTML={{ __html: article.content }} />
     </div>
   );
 }

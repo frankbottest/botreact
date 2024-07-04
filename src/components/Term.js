@@ -1,21 +1,22 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
-import './Term.css';
+import { useParams, useNavigate } from 'react-router-dom';
 import termsData from '../data/glossary.json';
+import './Term.css';
 
 function Term() {
   const { termId } = useParams();
+  const navigate = useNavigate();
   const term = Object.values(termsData)
     .flat()
     .find(term => term.id === parseInt(termId));
 
   if (!term) {
-    return <div className="term"><h1>Термин не найден</h1></div>;
+    return <div className="term-page"><h1>Термин не найден</h1></div>;
   }
 
   return (
-    <div className="term">
-      <Link to="/glossary" className="back-button">Назад</Link>
+    <div className="term-page">
+      <button className="back-button" onClick={() => navigate(-1)}>Назад</button>
       <h1>{term.term}</h1>
       <p>{term.description}</p>
     </div>
