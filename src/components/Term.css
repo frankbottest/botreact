@@ -1,5 +1,5 @@
-@import './variables.css';
-@import './global.css';
+@import '../variables.css';
+@import '../global.css';
 
 .term-page {
 }
