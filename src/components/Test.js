@@ -32,18 +32,6 @@ function Test() {
     }
   };
 
-  const handleTestCompletion = () => {
-    if (score === questions.length) {
-      // Обновляем прогресс пользователя
-      const storedProgress = JSON.parse(localStorage.getItem('completedLessons')) || [];
-      if (!storedProgress.includes(parseInt(lessonId))) {
-        storedProgress.push(parseInt(lessonId));
-        localStorage.setItem('completedLessons', JSON.stringify(storedProgress));
-      }
-    }
-    setShowResult(true);
-  };
-
   const handleRetry = () => {
     setCurrentQuestionIndex(0);
     setScore(0);
