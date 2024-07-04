@@ -1,72 +1,56 @@
-/* src/components/Glossary.css */
+@import '../variables.css';
+@import '../global.css';
+
 .glossary {
-    text-align: center;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 60px; /* Оставляем место для меню */
-    overflow-y: auto;
-  }
-  
-  .glossary input {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-    font-size: 16px;
-  }
-  
-  .alphabet {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px 0;
-  }
-  
-  .alphabet button {
-    margin: 5px;
-    padding: 10px;
-    background-color: #1e1e1e;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .alphabet button:hover {
-    background-color: #d4af37;
-  }
-  
-  .terms {
-    margin-top: 20px;
-    max-height: 70vh;
-    overflow-y: auto;
-  }
-  
-  .letter-divider {
-    font-size: 18px;
-    color: #d4af37;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #d4af37;
-  }
-  
-  .term-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .glossary-term {
-    flex: 1 1 45%;
-    margin-bottom: 5px;
-  }
-  
-  .glossary-term a {
-    color: #d4af37;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .glossary-term a:hover {
-    text-decoration: underline;
-  }
+  padding: 20px 20px 80px 20px;
+}
+
+.alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.alphabet button {
+  margin: 2px;
+  padding: 5px 10px;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alphabet button:hover {
+  background-color: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+}
+
+.terms {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.letter-divider {
+  margin-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--button-background-color);
+  color: var(--text-color);
+}
+
+.term-list {
+  margin-bottom: 20px;
+}
+
+.glossary-term {
+  margin: 10px 0;
+}
+
+.glossary-term a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.glossary-term a:hover {
+  color: var(--button-hover-background-color);
+}
