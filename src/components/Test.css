@@ -1,5 +1,5 @@
 .test-page {
-  padding: 20px;
+  padding: 20px 20px 80px 20px;
   font-family: 'Montserrat', sans-serif;
   color: #ececec; /* Новый цвет текста */
   text-align: left;
@@ -17,7 +17,7 @@
 }
 
 .test-page button:hover {
-  background-color: #4CAF50;
+  background-color: #f0c674;
   color: black;
 }
 
@@ -28,6 +28,11 @@
 
 .option-input {
   margin-right: 10px;
+}
+
+.test-page p,
+.test-page span {
+  color: rgb(255 255 255 / 75%);
 }
 
 /* Добавляем стили для кнопок "Назад" */
@@ -42,6 +47,6 @@
 }
 
 .back-button:hover {
-  background-color: #d4af37;
+  background-color: #f0c674;
   color: black;
 }

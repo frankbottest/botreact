@@ -1,5 +1,5 @@
 .lesson-page {
-  padding: 20px;
+  padding: 20px 20px 80px 20px;
   font-family: 'Montserrat', sans-serif;
   color: #ececec; /* Новый цвет текста */
   text-align: left;
@@ -7,6 +7,11 @@
 
 .lesson-content {
   margin-bottom: 20px;
+}
+
+.lesson-content p,
+.lesson-content span {
+  color: rgb(255 255 255 / 75%);
 }
 
 .test-button {
@@ -22,7 +27,7 @@
 }
 
 .test-button:hover {
-  background-color: #d4af37;
+  background-color: #f0c674;
   color: black;
 }
 
@@ -38,6 +43,6 @@
 }
 
 .back-button:hover {
-  background-color: #d4af37;
+  background-color: #f0c674;
   color: black;
 }

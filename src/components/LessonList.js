@@ -7,7 +7,6 @@ function LessonList() {
   const [completedLessons, setCompletedLessons] = useState([]);
 
   useEffect(() => {
-    // Загружаем прогресс пользователя из localStorage или Telegram Web App storage
     const storedProgress = JSON.parse(localStorage.getItem('completedLessons')) || [];
     setCompletedLessons(storedProgress);
   }, []);
@@ -20,7 +19,6 @@ function LessonList() {
         <div key={lesson.id} className={`lesson ${isLessonCompleted(lesson.id) ? 'completed' : ''}`}>
           <Link to={isLessonCompleted(lesson.id) || index === 0 || isLessonCompleted(lessonsData[index - 1].id) ? `/learning/lessons/${lesson.id}` : '#'}>
             {lesson.title}
-            <span className={`status-icon ${isLessonCompleted(lesson.id) ? 'completed' : 'pending'}`}>✔</span>
           </Link>
         </div>
       ))}
