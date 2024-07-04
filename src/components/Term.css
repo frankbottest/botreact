@@ -1,26 +1,8 @@
+@import './variables.css';
+@import './global.css';
+
 .term-page {
-  padding: 20px 20px 80px 20px;
-  font-family: 'Montserrat', sans-serif;
-  color: #ececec; /* Новый цвет текста */
-  text-align: left;
 }
 
-.term-page p,
-.term-page span {
-  color: rgb(255 255 255 / 75%);
-}
-
-.back-button {
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  background-color: #1e1e1e;
-  color: #ececec;
-  border: 1px solid gray;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.back-button:hover {
-  background-color: #f0c674;
-  color: black;
+.term-content {
 }

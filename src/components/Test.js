@@ -45,7 +45,7 @@ function Test() {
   };
 
   return (
-    <div className="container test-page">
+    <div className="page test-page">
       <button className="back-button" onClick={() => navigate(-1)}>Назад</button>
       {!showResult ? (
         <>

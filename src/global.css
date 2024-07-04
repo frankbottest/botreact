@@ -1,87 +1,105 @@
+@import './variables.css';
+
 body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #121212; /* Темный фон */
-    color: #ececec; /* Основной цвет текста */
-    overflow: hidden; /* Предотвращаем прокрутку за пределы */
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: #ececec; /* Цвет заголовков */
-  }
-  
-  p, span {
-    color: rgb(255 255 255 / 75%); /* Цвет текста */
-  }
-  
-  button, .back-button, .test-button, .start-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #1e1e1e; /* Цвет фона кнопок */
-    color: #ececec; /* Цвет текста кнопок */
-    text-decoration: none;
-    border: 1px solid gray;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  button:hover, .back-button:hover, .test-button:hover, .start-button:hover {
-    background-color: #f0c674; /* Цвет при наведении */
-    color: black;
-  }
-  
-  .container {
-    padding: 20px 20px 80px 20px;
-    text-align: left;
-  }
-  
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background-color); /* Темный фон */
+  color: var(--text-color); /* Основной цвет текста */
+  overflow: hidden; /* Предотвращаем прокрутку за пределы */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color); /* Цвет заголовков */
+}
+
+p, span {
+  color: var(--text-color-muted); /* Цвет текста */
+}
+
+button, .back-button, .test-button, .start-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: var(--button-background-color); /* Цвет фона кнопок */
+  color: var(--button-text-color); /* Цвет текста кнопок */
+  text-decoration: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button:hover, .back-button:hover, .test-button:hover, .start-button:hover {
+  background-color: var(--button-hover-background-color); /* Цвет при наведении */
+  color: var(--button-hover-text-color);
+}
+
+.container {
+  padding: 20px 20px 80px 20px;
+  text-align: left;
+}
+
 /* Стили для меню */
 .menu {
-    display: flex;
-    justify-content: space-around;
-    background-color: #1e1e1e;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 20px; /* Поднимаем меню на 20 пикселей */
-    width: 100%;
-    z-index: 1000; /* Меню всегда наверху */
-  }
-  
-  .menu-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: gray; /* Серый цвет для неактивных вкладок */
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .menu-item.active {
-    color: #f0c674; /* Премиум-золотой для активной вкладки */
-  }
-  
-  .menu-item.active span {
-    color: #f0c674; /* Премиум-золотой для текста активной вкладки */
-  }
-  
-  .menu-item span {
-    margin-top: 5px;
-    font-size: 12px;
-  }
-  
-  .menu-item:hover {
-    color: #f0c674;
-  }
-  
-  /* Заливка под меню */
-  .footer-fill {
-    background-color: #1e1e1e;
-    height: 60px; /* Высота меню */
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    z-index: 999; /* Ниже чем меню */
-  }
-  
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--button-background-color);
+  padding: 10px 0;
+  position: fixed;
+  bottom: 20px; /* Поднимаем меню на 20 пикселей */
+  width: 100%;
+  z-index: 1000; /* Меню всегда наверху */
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--menu-item-inactive-color); /* Серый цвет для неактивных вкладок */
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu-item.active {
+  color: var(--menu-item-active-color); /* Премиум-золотой для активной вкладки */
+}
+
+.menu-item.active span {
+  color: var(--menu-item-active-color); /* Премиум-золотой для текста активной вкладки */
+}
+
+.menu-item span {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.menu-item:hover {
+  color: var(--menu-item-active-color);
+}
+
+/* Заливка под меню */
+.footer-fill {
+  background-color: var(--button-background-color);
+  height: 60px; /* Высота меню */
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 999; /* Ниже чем меню */
+}
+
+/* Стили для страниц */
+.page {
+  padding: 20px 20px 80px 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color); /* Новый цвет текста */
+  text-align: left;
+}
+
+.page-content {
+  margin-bottom: 20px;
+}
+
+.page-content p,
+.page-content span {
+  color: var(--text-color-muted);
+}

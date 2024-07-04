@@ -1,0 +1,12 @@
+:root {
+    --background-color: #121212;
+    --text-color: #ececec;
+    --text-color-muted: rgb(255 255 255 / 75%);
+    --button-background-color: #1e1e1e;
+    --button-text-color: #ececec;
+    --button-hover-background-color: #f0c674;
+    --button-hover-text-color: black;
+    --menu-item-inactive-color: gray;
+    --menu-item-active-color: #f0c674;
+  }
+  
