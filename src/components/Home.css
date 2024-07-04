@@ -23,7 +23,7 @@
   padding: 10px;
   margin: 10px;
   background-color: var(--button-background-color);
-  color: var(--text-color);
+  color: var(--button-text-color);
   text-decoration: none;
   border: 1px solid gray;
   border-radius: 5px;
@@ -31,16 +31,25 @@
   justify-content: center;
 }
 
-.home-button img {
-  width: 20px;
-  height: 20px;
+.home-button .icon {
   margin-right: 10px; /* Отступ между иконкой и текстом */
+  font-size: 20px;
 }
 
 .home-button.youtube {
   background-color: #FF0000; /* Красный цвет ютуба */
+  color: #ffffff; /* Белый цвет текста */
 }
 
 .home-button.telegram {
   background-color: #0088cc; /* Голубой цвет телеграма */
+  color: #ffffff; /* Белый цвет текста */
+}
+
+.ad-block {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px dashed var(--text-color);
+  border-radius: 5px;
+  color: var(--text-color);
 }

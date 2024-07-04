@@ -1,7 +1,6 @@
 import React from 'react';
 import './Home.css';
-import youtubeIcon from '../assets/youtube.png';
-import telegramIcon from '../assets/telegram.png';
+import { FaYoutube, FaTelegramPlane } from 'react-icons/fa';
 
 function Home() {
   return (
@@ -9,11 +8,11 @@ function Home() {
       <h1 className="home-title">CryptoDex Academy</h1>
       <div className="button-container">
         <a href="https://www.youtube.com" className="home-button youtube">
-          <img src={youtubeIcon} alt="YouTube" />
+          <FaYoutube className="icon" />
           <span>YouTube</span>
         </a>
         <a href="https://www.telegram.org" className="home-button telegram">
-          <img src={telegramIcon} alt="Telegram" />
+          <FaTelegramPlane className="icon" />
           <span>Telegram</span>
         </a>
       </div>
