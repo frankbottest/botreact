@@ -1,15 +1,15 @@
 @import '../variables.css';
 @import '../global.css';
 
-.trading-page {
+.trading-articles-page {
 }
 
-.trading-sections {
+.articles-list {
   display: flex;
   flex-direction: column;
 }
 
-.trading-section {
+.article-item {
   display: block;
   padding: 10px;
   margin: 10px 0;
@@ -18,10 +18,9 @@
   text-decoration: none;
   border: 1px solid gray;
   border-radius: 5px;
-  text-align: center;
 }
 
-.trading-section:hover {
+.article-item:hover {
   background-color: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
 }

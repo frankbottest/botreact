@@ -1,12 +1,22 @@
-// src/components/Trading.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Trading.css';
 
 function Trading() {
   return (
-    <div className="trading">
+    <div className="container trading-page">
       <h1>Трейдинг</h1>
-      <p>Контент для страницы Трейдинг</p>
+      <div className="trading-sections">
+        <Link to="/trading/patterns" className="trading-section">
+          Паттерны
+        </Link>
+        <Link to="/trading/candles" className="trading-section">
+          Свечи
+        </Link>
+        <Link to="/trading/strategies" className="trading-section">
+          Стратегии
+        </Link>
+      </div>
     </div>
   );
 }
