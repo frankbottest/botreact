@@ -1,6 +1,38 @@
 {
-    "patterns": [],
-    "candles": [],
-    "strategies": []
-  }
-  
+  "patterns": [
+    {
+      "id": 1,
+      "title": "Pattern 1",
+      "image": "pattern1.png"
+    },
+    {
+      "id": 2,
+      "title": "Pattern 2",
+      "image": "pattern2.png"
+    }
+  ],
+  "candles": [
+    {
+      "id": 1,
+      "title": "Candle 1",
+      "image": "candle1.png"
+    },
+    {
+      "id": 2,
+      "title": "Candle 2",
+      "image": "candle2.png"
+    }
+  ],
+  "strategies": [
+    {
+      "id": 1,
+      "title": "Strategy 1",
+      "image": "strategy1.png"
+    },
+    {
+      "id": 2,
+      "title": "Strategy 2",
+      "image": "strategy2.png"
+    }
+  ]
+}
