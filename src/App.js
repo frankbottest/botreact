@@ -13,6 +13,7 @@ import LessonList from './components/LessonList';
 import Lesson from './components/Lesson';
 import Test from './components/Test';
 import TradingArticles from './components/TradingArticles';
+import TradingArticle from './components/TradingArticle';
 import './App.css';
 import './global.css'; // Импорт глобальных стилей
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/" element={<Home />} exact />
             <Route path="/trading" element={<Trading />} />
             <Route path="/trading/:section" element={<TradingArticles />} />
+            <Route path="/trading/:section/:articleId" element={<TradingArticle />} />
             <Route path="/learning" element={<Learning />} />
             <Route path="/learning/lessons" element={<LessonList />} />
             <Route path="/learning/lessons/:lessonId" element={<Lesson />} />

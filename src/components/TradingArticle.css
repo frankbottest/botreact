@@ -1,0 +1,9 @@
+@import '../variables.css';
+@import '../global.css';
+
+.article-page {
+}
+
+.article-content {
+  margin-top: 20px;
+}
