@@ -4,6 +4,15 @@
 .article-page {
 }
 
+.article-image {
+  width: 100%;
+  height: auto;
+  max-width: 800px; /* Максимальная ширина изображения */
+  display: block;
+  margin: 20px auto; /* Центрирование изображения */
+  border-radius: 5px; /* Закругленные края */
+}
+
 .article-content {
   margin-top: 20px;
 }
