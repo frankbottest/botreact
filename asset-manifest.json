@@ -1,15 +1,21 @@
 {
   "files": {
     "main.css": "/botreact/static/css/main.22e3266b.css",
-    "main.js": "/botreact/static/js/main.5388f3e4.js",
+    "main.js": "/botreact/static/js/main.61504dd2.js",
     "static/js/453.afd2f2a8.chunk.js": "/botreact/static/js/453.afd2f2a8.chunk.js",
+    "static/media/candle1.png": "/botreact/static/media/candle1.f5ee8f936f8b578989aa.png",
+    "static/media/pattern1.png": "/botreact/static/media/pattern1.b109862c66028ec38fc3.png",
+    "static/media/strategy2.png": "/botreact/static/media/strategy2.b109862c66028ec38fc3.png",
+    "static/media/pattern2.png": "/botreact/static/media/pattern2.a23a09288f7c28dc82f1.png",
+    "static/media/strategy1.png": "/botreact/static/media/strategy1.a23a09288f7c28dc82f1.png",
+    "static/media/candle2.png": "/botreact/static/media/candle2.b0816265da6c16573a73.png",
     "index.html": "/botreact/index.html",
     "main.22e3266b.css.map": "/botreact/static/css/main.22e3266b.css.map",
-    "main.5388f3e4.js.map": "/botreact/static/js/main.5388f3e4.js.map",
+    "main.61504dd2.js.map": "/botreact/static/js/main.61504dd2.js.map",
     "453.afd2f2a8.chunk.js.map": "/botreact/static/js/453.afd2f2a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.22e3266b.css",
-    "static/js/main.5388f3e4.js"
+    "static/js/main.61504dd2.js"
   ]
 }
