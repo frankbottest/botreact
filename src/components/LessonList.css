@@ -1,37 +1,40 @@
+@import '../variables.css';
+@import '../global.css';
+
 .lesson-list {
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-  }
-  
-  .lesson {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid gray;
-    border-radius: 5px;
-  }
-  
-  .lesson.completed {
-    border-color: #4CAF50;
-  }
-  
-  .lesson a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .status-icon {
-    font-size: 20px;
-  }
-  
-  .status-icon.completed {
-    color: #4CAF50;
-  }
-  
-  .status-icon.pending {
-    color: gray;
-  }
-  
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+}
+
+.lesson {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.lesson.completed {
+  border-color: #4CAF50;
+}
+
+.lesson a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px; /* Уменьшение шрифта для названий уроков */
+}
+
+.status-icon {
+  font-size: 20px;
+}
+
+.status-icon.completed {
+  color: #4CAF50;
+}
+
+.status-icon.pending {
+  color: gray;
+}
