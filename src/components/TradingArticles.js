@@ -31,7 +31,7 @@ function TradingArticles() {
       <div className="articles-list">
         {filteredArticles.map(article => (
           <Link key={article.id} to={`/trading/${section}/${article.id}`} className="article-item">
-            <img src={require(`../assets/${article.image}`).default} alt={article.title} />
+            <img src={require(`../assets/${article.image}`)} alt={article.title} />
             <span>{article.title}</span>
           </Link>
         ))}
