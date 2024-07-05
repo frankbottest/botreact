@@ -7,11 +7,11 @@ function Home() {
     <div className="home">
       <h1 className="home-title">CryptoDex Academy</h1>
       <div className="button-container">
-        <a href="https://www.youtube.com" className="home-button youtube">
+        <a href="https://www.youtube.com/@CryptoDexxx" className="home-button youtube">
           <FaYoutube className="icon" />
           <span>YouTube</span>
         </a>
-        <a href="https://www.telegram.org" className="home-button telegram">
+        <a href="https://t.me/cryptodexxx" className="home-button telegram">
           <FaTelegramPlane className="icon" />
           <span>Telegram</span>
         </a>
