@@ -83,6 +83,7 @@ function Glossary() {
         value={searchTerm}
         onChange={handleSearchChange}
         onKeyPress={handleSearchKeyPress}
+        className="search-input"
       />
       <div className="alphabet">
         {alphabet.map(letter => (
