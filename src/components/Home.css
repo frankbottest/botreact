@@ -8,7 +8,19 @@
 
 .home-title {
   font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.home-subtitle {
+  font-size: 14px;
   margin-bottom: 20px;
+  color: var(--text-color-muted);
+}
+
+.channel-prompt {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--text-color-muted);
 }
 
 .button-container {
