@@ -25,10 +25,10 @@
   background-color: var(--button-background-color);
   color: var(--button-text-color);
   text-decoration: none;
-  border: 1px solid gray;
   border-radius: 5px;
   width: 45%;
   justify-content: center;
+  border: none; /* Убираем обводку */
 }
 
 .home-button .icon {
@@ -44,6 +44,8 @@
 .home-button.telegram {
   background-color: #0088cc; /* Голубой цвет телеграма */
   color: #ffffff; /* Белый цвет текста */
+  margin-right: 0; /* Добавить margin-right */
+  margin-left: 0; /* Добавить margin-left */
 }
 
 .ad-block {
