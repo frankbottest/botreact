@@ -27,13 +27,16 @@
 }
 
 .article-item img {
-  width: 50px; /* Adjust the size as needed */
-  height: 50px; /* Adjust the size as needed */
-  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .article-item span {
   color: var(--text-color);
+  margin-top: 5px;
 }
 
 .article-item:hover {
