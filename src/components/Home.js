@@ -3,6 +3,8 @@ import './Home.css';
 import { FaYoutube, FaTelegramPlane } from 'react-icons/fa';
 
 function Home() {
+  const latestVideoId = '2aE9C3otSr8'; // Замените на ID последнего видео
+
   return (
     <div className="home">
       <h1 className="home-title">CryptoDex Academy</h1>
@@ -17,6 +19,18 @@ function Home() {
           <FaTelegramPlane className="icon" />
           <span>Telegram</span>
         </a>
+      </div>
+      <div className="latest-video">
+        <h3>Последнее видео:</h3>
+        <iframe
+          width="560"
+          height="315"
+          src={`https://www.youtube.com/embed/${latestVideoId}`}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
       <div className="ad-block">
         <p>Реклама</p>
