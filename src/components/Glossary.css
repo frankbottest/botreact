@@ -1,33 +1,58 @@
 @import '../variables.css';
 @import '../global.css';
 
-.glossary-page {
+.glossary {
+  padding: 20px 20px 80px 20px;
 }
 
-.glossary-content {
+.alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-.glossary-content p,
-.glossary-content span {
-  color: var(--text-color-muted);
-}
-
-.term {
-  display: inline-block;
-  width: 45%;
-  margin: 2.5%;
-  padding: 10px;
+.alphabet button {
+  margin: 2px;
+  padding: 5px 10px;
   background-color: var(--button-background-color);
-  color: var(--text-color);
-  text-decoration: none;
+  color: var(--button-text-color);
   border: 1px solid gray;
   border-radius: 5px;
-  text-align: left;
+  cursor: pointer;
 }
 
-.term:hover {
+.alphabet button:hover {
   background-color: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
+}
+
+.terms {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.letter-divider {
+  margin-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--button-background-color);
+  color: var(--text-color);
+}
+
+.term-list {
+  margin-bottom: 20px;
+}
+
+.glossary-term {
+  margin: 10px 0;
+}
+
+.glossary-term a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.glossary-term a:hover {
+  color: var(--button-hover-background-color);
 }
 
 .search-input {
