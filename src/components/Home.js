@@ -9,7 +9,6 @@ function Home() {
     <div className="home">
       <h1 className="home-title">CryptoDex Academy</h1>
       <h2 className="home-subtitle">Твой карманный помощник в мире криптовалют</h2>
-      <p className="channel-prompt">Подпишитесь на мои каналы</p>
       <div className="button-container">
         <a href="https://www.youtube.com/@CryptoDexxx" className="home-button youtube">
           <FaYoutube className="icon" />
@@ -22,15 +21,15 @@ function Home() {
       </div>
       <div className="latest-video">
         <h3>Последнее видео:</h3>
-        <iframe
-          width="560"
-          height="315"
-          src={`https://www.youtube.com/embed/${latestVideoId}`}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        <div className="video-container">
+          <iframe
+            src={`https://www.youtube.com/embed/${latestVideoId}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
       <div className="ad-block">
         <p>Реклама</p>

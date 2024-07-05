@@ -15,12 +15,7 @@
   font-size: 14px;
   margin-bottom: 20px;
   color: var(--text-color-muted);
-}
-
-.channel-prompt {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: var(--text-color-muted);
+  font-weight: 300; /* Тонкий шрифт */
 }
 
 .button-container {
@@ -62,6 +57,24 @@
 
 .latest-video {
   margin-top: 20px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .ad-block {
