@@ -3,6 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import tradingData from '../data/trading.json';
 import './TradingArticle.css';
 
+const images = require.context('../assets', false, /\.(png|jpe?g|svg)$/);
+
 function TradingArticle() {
   const { section, articleId } = useParams();
   const navigate = useNavigate();
@@ -12,8 +14,7 @@ function TradingArticle() {
     return <div className="container"><h1>Статья не найдена</h1></div>;
   }
 
-  // Dynamically import the image
-  const articleImage = require(`../assets/${article.image}`).default;
+  const articleImage = images(`./${article.image}`).default;
 
   return (
     <div className="container article-page">
