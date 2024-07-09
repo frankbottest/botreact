@@ -34,8 +34,8 @@
 }
 
 .lesson.locked {
-  background: linear-gradient(135deg, #1e1e1e, #000000);
-  color: var(--text-color-muted);
+    background: linear-gradient(135deg, #1e1e1e, #0000);
+    color: #ffffff59;
 }
 
 .back-button {
