@@ -5,43 +5,47 @@
   padding: 20px 20px 80px 20px;
 }
 
-.exchange-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.exchange-button {
+.exchange-list {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+.exchange-item {
+  display: flex;
   align-items: center;
-  padding: 10px;
-  margin: 10px;
   background-color: var(--button-background-color);
-  color: var(--text-color);
-  text-decoration: none;
   border: 1px solid gray;
   border-radius: 5px;
-  text-align: center;
-  width: 120px; /* Adjust the size as needed */
-  height: 120px; /* Adjust the size as needed */
-}
-
-.exchange-button img {
-  width: 50px; /* Adjust the size as needed */
-  height: 50px; /* Adjust the size as needed */
-  margin-bottom: 10px;
-}
-
-.exchange-button span {
+  text-decoration: none;
   color: var(--text-color);
+  padding: 10px;
 }
 
-.exchange-button:hover {
+.exchange-item:hover {
   background-color: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
 }
 
-.exchange-button:hover span {
-  color: var(--button-hover-text-color);
+.exchange-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.exchange-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.exchange-content h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.exchange-content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: var(--text-color-muted);
 }
