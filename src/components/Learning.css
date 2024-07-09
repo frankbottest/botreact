@@ -5,13 +5,13 @@
   padding: 20px 20px 80px 20px;
 }
 
-.course-list {
+.courses {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.course-item {
+.course-button {
   display: flex;
   align-items: center;
   background-color: var(--button-background-color);
@@ -22,7 +22,7 @@
   padding: 10px;
 }
 
-.course-item:hover {
+.course-button:hover {
   background-color: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
 }
@@ -34,17 +34,17 @@
   margin-right: 20px;
 }
 
-.course-content {
+.course-text {
   display: flex;
   flex-direction: column;
 }
 
-.course-content h2 {
+.course-text h2 {
   margin: 0;
   font-size: 18px;
 }
 
-.course-content p {
+.course-text p {
   margin: 5px 0 0;
   font-size: 14px;
   color: var(--text-color-muted);

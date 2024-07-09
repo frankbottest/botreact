@@ -1,36 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Learning.css';
-import beginnerImage from '../assets/beginner.png';
-import intermediateImage from '../assets/intermediate.png';
-import advancedImage from '../assets/advanced.png';
+import course1Image from '../assets/course1.png';
+import course2Image from '../assets/course2.png';
+import course3Image from '../assets/course3.png';
+
+const courses = [
+  { id: 1, title: "Основы криптовалют", description: "Изучите базовые понятия и принципы работы криптовалют.", image: course1Image },
+  { id: 2, title: "Продвинутые техники", description: "Углубленные знания и продвинутые техники работы с криптовалютами.", image: course2Image },
+  { id: 3, title: "Торговые стратегии", description: "Освойте эффективные торговые стратегии и тактики.", image: course3Image }
+];
 
 function Learning() {
   return (
     <div className="learning">
       <h1>Обучение</h1>
-      <div className="course-list">
-        <Link to="/learning/beginner" className="course-item">
-          <img src={beginnerImage} alt="Начальный курс" className="course-image" />
-          <div className="course-content">
-            <h2>Начальный курс</h2>
-            <p>Основы криптовалют и блокчейна для начинающих.</p>
-          </div>
-        </Link>
-        <Link to="/learning/intermediate" className="course-item">
-          <img src={intermediateImage} alt="Продвинутый курс" className="course-image" />
-          <div className="course-content">
-            <h2>Продвинутый курс</h2>
-            <p>Углубленное изучение криптовалют и трейдинга.</p>
-          </div>
-        </Link>
-        <Link to="/learning/advanced" className="course-item">
-          <img src={advancedImage} alt="Курс для экспертов" className="course-image" />
-          <div className="course-content">
-            <h2>Курс для экспертов</h2>
-            <p>Передовые техники и стратегии для профессионалов.</p>
-          </div>
-        </Link>
+      <p>Выберите курс для обучения:</p>
+      <div className="courses">
+        {courses.map(course => (
+          <Link key={course.id} to={`/learning/courses/${course.id}`} className="course-button">
+            <img src={course.image} alt={course.title} className="course-image" />
+            <div className="course-text">
+              <h2>{course.title}</h2>
+              <p>{course.description}</p>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
