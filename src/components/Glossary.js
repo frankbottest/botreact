@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Glossary.css';
 import termsData from '../data/glossary.json';
 
 function Glossary() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredTerms, setFilteredTerms] = useState([]);
-  const location = useLocation();
   const termsContainerRef = useRef(null);
   const alphabetRef = useRef([]);
   const alphabetSidebarRef = useRef(null);
