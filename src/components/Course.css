@@ -2,7 +2,7 @@
 @import '../global.css';
 
 .course-page {
-  padding: 20px 20px 100px 20px; /* Добавляем отступ снизу */
+  padding: 20px 20px 90px 20px; /* Добавляем отступ снизу */
   font-family: 'Montserrat', sans-serif;
   color: var(--text-color);
   text-align: left;
@@ -15,18 +15,17 @@
 }
 
 .lesson {
-  padding: 10px;
-  border: 1px solid gray;
+  border: 1px solid #80808042;
   border-radius: 5px;
+  padding: 15px;
+  font-size: 13px;
+  background: linear-gradient(135deg, #1e1e1e, #d4af3700);
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 .lesson.completed {
   border-color: #4CAF50;
-}
-
-.lesson a {
-  color: var(--text-color);
-  text-decoration: none;
 }
 
 .lesson.completed a {

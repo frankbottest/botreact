@@ -40,11 +40,13 @@ const Course = () => {
       <h1>{courseTitles[courseId]}</h1>
       <div className="lesson-list">
         {lessons.map((lesson, index) => (
-          <div key={lesson.id} className={`lesson ${isLessonCompleted(lesson.id) ? 'completed' : ''}`}>
-            <Link to={isLessonCompleted(lesson.id) || index === 0 || isLessonCompleted(lessons[index - 1].id) ? `/learning/courses/${courseId}/lessons/${lesson.id}` : '#'}>
-              {lesson.title}
-            </Link>
-          </div>
+          <Link
+            key={lesson.id}
+            to={isLessonCompleted(lesson.id) || index === 0 || isLessonCompleted(lessons[index - 1].id) ? `/learning/courses/${courseId}/lessons/${lesson.id}` : '#'}
+            className={`lesson ${isLessonCompleted(lesson.id) ? 'completed' : ''}`}
+          >
+            {lesson.title}
+          </Link>
         ))}
       </div>
     </div>
