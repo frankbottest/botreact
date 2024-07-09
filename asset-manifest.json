@@ -1,8 +1,11 @@
 {
   "files": {
-    "main.css": "/botreact/static/css/main.8b39824c.css",
-    "main.js": "/botreact/static/js/main.2000d140.js",
+    "main.css": "/botreact/static/css/main.881d26dd.css",
+    "main.js": "/botreact/static/js/main.6d1bbf11.js",
     "static/js/453.afd2f2a8.chunk.js": "/botreact/static/js/453.afd2f2a8.chunk.js",
+    "static/media/course1.png": "/botreact/static/media/course1.f6f3a02832c91670ed67.png",
+    "static/media/course2.png": "/botreact/static/media/course2.f6f3a02832c91670ed67.png",
+    "static/media/course3.png": "/botreact/static/media/course3.f6f3a02832c91670ed67.png",
     "static/media/candle1.png": "/botreact/static/media/candle1.f5ee8f936f8b578989aa.png",
     "static/media/pattern1.png": "/botreact/static/media/pattern1.b109862c66028ec38fc3.png",
     "static/media/strategy2.png": "/botreact/static/media/strategy2.b109862c66028ec38fc3.png",
@@ -10,12 +13,12 @@
     "static/media/strategy1.png": "/botreact/static/media/strategy1.a23a09288f7c28dc82f1.png",
     "static/media/candle2.png": "/botreact/static/media/candle2.b0816265da6c16573a73.png",
     "index.html": "/botreact/index.html",
-    "main.8b39824c.css.map": "/botreact/static/css/main.8b39824c.css.map",
-    "main.2000d140.js.map": "/botreact/static/js/main.2000d140.js.map",
+    "main.881d26dd.css.map": "/botreact/static/css/main.881d26dd.css.map",
+    "main.6d1bbf11.js.map": "/botreact/static/js/main.6d1bbf11.js.map",
     "453.afd2f2a8.chunk.js.map": "/botreact/static/js/453.afd2f2a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b39824c.css",
-    "static/js/main.2000d140.js"
+    "static/css/main.881d26dd.css",
+    "static/js/main.6d1bbf11.js"
   ]
 }
