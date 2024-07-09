@@ -37,7 +37,7 @@
 .exchange-content {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align-last: left;
 }
 
 .exchange-content h2 {

@@ -9,6 +9,7 @@ function Trading() {
   return (
     <div className="trading">
       <h1>Трейдинг</h1>
+      <p>Изучите различные аспекты трейдинга, включая паттерны, свечи и стратегии.</p>
       <div className="course-list">
         <Link to="/trading/patterns" className="course-item">
           <img src={patternsImage} alt="Паттерны" className="course-image" />

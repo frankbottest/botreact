@@ -10,6 +10,7 @@ function Exchanges() {
   return (
     <div className="exchanges">
       <h1>Биржи</h1>
+      <p>Выберите биржу для получения подробной информации и инструкций.</p>
       <div className="exchange-list">
         <Link to="/exchanges/bybit" className="exchange-item">
           <img src={bybitLogo} alt="Bybit" className="exchange-image" />
