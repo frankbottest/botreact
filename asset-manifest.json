@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/botreact/static/css/main.881d26dd.css",
-    "main.js": "/botreact/static/js/main.6d1bbf11.js",
+    "main.css": "/botreact/static/css/main.515e5c66.css",
+    "main.js": "/botreact/static/js/main.04ca98e6.js",
     "static/js/453.afd2f2a8.chunk.js": "/botreact/static/js/453.afd2f2a8.chunk.js",
-    "static/media/course1.png": "/botreact/static/media/course1.f6f3a02832c91670ed67.png",
-    "static/media/course2.png": "/botreact/static/media/course2.f6f3a02832c91670ed67.png",
-    "static/media/course3.png": "/botreact/static/media/course3.f6f3a02832c91670ed67.png",
+    "static/media/course2.png": "/botreact/static/media/course2.6d35291bd17a6f96529e.png",
+    "static/media/course3.png": "/botreact/static/media/course3.1d364538dd357e731ac3.png",
+    "static/media/course1.png": "/botreact/static/media/course1.c404f3a5a1f8397f57f8.png",
     "static/media/candle1.png": "/botreact/static/media/candle1.f5ee8f936f8b578989aa.png",
     "static/media/pattern1.png": "/botreact/static/media/pattern1.b109862c66028ec38fc3.png",
     "static/media/strategy2.png": "/botreact/static/media/strategy2.b109862c66028ec38fc3.png",
@@ -13,12 +13,12 @@
     "static/media/strategy1.png": "/botreact/static/media/strategy1.a23a09288f7c28dc82f1.png",
     "static/media/candle2.png": "/botreact/static/media/candle2.b0816265da6c16573a73.png",
     "index.html": "/botreact/index.html",
-    "main.881d26dd.css.map": "/botreact/static/css/main.881d26dd.css.map",
-    "main.6d1bbf11.js.map": "/botreact/static/js/main.6d1bbf11.js.map",
+    "main.515e5c66.css.map": "/botreact/static/css/main.515e5c66.css.map",
+    "main.04ca98e6.js.map": "/botreact/static/js/main.04ca98e6.js.map",
     "453.afd2f2a8.chunk.js.map": "/botreact/static/js/453.afd2f2a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.881d26dd.css",
-    "static/js/main.6d1bbf11.js"
+    "static/css/main.515e5c66.css",
+    "static/js/main.04ca98e6.js"
   ]
 }
