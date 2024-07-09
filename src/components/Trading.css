@@ -37,6 +37,7 @@
 .course-content {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .course-content h2 {
