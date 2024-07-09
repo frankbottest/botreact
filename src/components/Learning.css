@@ -14,16 +14,42 @@
 }
 
 .course-button {
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
   background-color: var(--button-background-color);
   color: var(--button-text-color);
   text-decoration: none;
-  border-radius: 5px;
-  text-align: center;
+  border-radius: 10px;
   border: 1px solid gray;
+  transition: background-color 0.3s;
 }
 
 .course-button:hover {
   background-color: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
+}
+
+.course-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.course-text {
+  flex-grow: 1;
+}
+
+.course-text h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.course-text p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: var(--text-color-muted);
 }

@@ -58,20 +58,20 @@ button:hover, .back-button:hover, .test-button:hover, .start-button:hover {
   color: var(--menu-item-inactive-color); /* Серый цвет для неактивных вкладок */
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
-  transition: color 0.4s;
-  transition-delay: color 0.4s;
+  transition: color 0.2s;
+  transition-delay: color 0.2s;
 }
 
 .menu-item.active {
   color: var(--menu-item-active-color); /* Премиум-золотой для активной вкладки */
-  transition: color 0.4s;
-  transition-delay: color 0.4s;
+  transition: color 0.2s;
+  transition-delay: color 0.2s;
 }
 
 .menu-item.active span {
   color: var(--menu-item-active-color); /* Премиум-золотой для текста активной вкладки */
-  transition: color 0.4s;
-  transition-delay: color 0.4s;
+  transition: color 0.2s;
+  transition-delay: color 0.2s;
 }
 
 .menu-item span {
@@ -81,8 +81,8 @@ button:hover, .back-button:hover, .test-button:hover, .start-button:hover {
 
 .menu-item:hover {
   color: var(--menu-item-active-color);
-  transition: color 0.4s;
-  transition-delay: color 0.4s;
+  transition: color 0.2s;
+  transition-delay: color 0.2s;
 }
 
 /* Заливка под меню */
