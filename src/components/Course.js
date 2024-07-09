@@ -29,6 +29,7 @@ const Course = () => {
   }, [courseId]);
 
   const isLessonCompleted = (lessonId) => completedLessons.includes(lessonId);
+  const isLessonAccessible = (lessonId, index) => isLessonCompleted(lessonId) || index === 0 || isLessonCompleted(lessons[index - 1].id);
 
   if (!lessons) {
     return <div>Курс не найден</div>;
@@ -42,8 +43,8 @@ const Course = () => {
         {lessons.map((lesson, index) => (
           <Link
             key={lesson.id}
-            to={isLessonCompleted(lesson.id) || index === 0 || isLessonCompleted(lessons[index - 1].id) ? `/learning/courses/${courseId}/lessons/${lesson.id}` : '#'}
-            className={`lesson ${isLessonCompleted(lesson.id) ? 'completed' : ''}`}
+            to={isLessonAccessible(lesson.id, index) ? `/learning/courses/${courseId}/lessons/${lesson.id}` : '#'}
+            className={`lesson ${isLessonCompleted(lesson.id) ? 'completed' : ''} ${!isLessonAccessible(lesson.id, index) ? 'locked' : ''}`}
           >
             {lesson.title}
           </Link>
