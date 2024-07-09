@@ -23,6 +23,7 @@
   border-radius: 10px;
   border: 1px solid gray;
   transition: background-color 0.3s;
+  text-align: left;
 }
 
 .course-button:hover {
