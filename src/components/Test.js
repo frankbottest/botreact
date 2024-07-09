@@ -1,31 +1,40 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import testsData from '../data/tests.json';
+import tests1 from '../data/tests.json';
+import tests2 from '../data/tests2.json';
+import tests3 from '../data/tests3.json';
 import './Test.css';
 
-function Test() {
-  const { lessonId } = useParams();
+const testsData = {
+  1: tests1,
+  2: tests2,
+  3: tests3
+};
+
+const Test = () => {
+  const { courseId, lessonId } = useParams();
   const navigate = useNavigate();
+  const tests = testsData[courseId];
+  const test = tests ? tests[lessonId] : null;
+
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [errors, setErrors] = useState(0);
 
-  const questions = testsData[lessonId];
-
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
 
   const handleNextQuestion = () => {
-    if (selectedOption === questions[currentQuestionIndex].answer) {
+    if (selectedOption === test[currentQuestionIndex].answer) {
       setScore(score + 1);
     } else {
       setErrors(errors + 1);
     }
     setSelectedOption('');
-    if (currentQuestionIndex < questions.length - 1) {
+    if (currentQuestionIndex < test.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       setShowResult(true);
@@ -41,8 +50,12 @@ function Test() {
   };
 
   const handleNextLesson = () => {
-    navigate(`/learning/lessons/${parseInt(lessonId) + 1}`);
+    navigate(`/learning/courses/${courseId}/lessons/${parseInt(lessonId) + 1}`);
   };
+
+  if (!tests || !test) {
+    return <div className="page"><h1>Тест не найден</h1></div>;
+  }
 
   return (
     <div className="page test-page">
@@ -50,8 +63,8 @@ function Test() {
       {!showResult ? (
         <>
           <h1>Тест по уроку {lessonId}</h1>
-          <p>{questions[currentQuestionIndex].question}</p>
-          {questions[currentQuestionIndex].options.map((option, index) => (
+          <p>{test[currentQuestionIndex].question}</p>
+          {test[currentQuestionIndex].options.map((option, index) => (
             <label key={index} className="option-label">
               <input
                 type="radio"
@@ -64,12 +77,12 @@ function Test() {
             </label>
           ))}
           <button onClick={handleNextQuestion}>
-            {currentQuestionIndex < questions.length - 1 ? 'Следующий вопрос' : 'Завершить тест'}
+            {currentQuestionIndex < test.length - 1 ? 'Следующий вопрос' : 'Завершить тест'}
           </button>
         </>
       ) : (
         <>
-          {score === questions.length ? (
+          {score === test.length ? (
             <>
               <h1>Тест пройден!</h1>
               <button onClick={handleNextLesson}>Следующий урок</button>
@@ -84,6 +97,6 @@ function Test() {
       )}
     </div>
   );
-}
+};
 
 export default Test;
