@@ -26,6 +26,7 @@
 
 .lesson.completed {
   border-color: #4CAF50;
+  background: linear-gradient(135deg, #4caf507d, #4caf5000);
 }
 
 .lesson.completed a {
