@@ -9,6 +9,7 @@ function Glossary() {
   const location = useLocation();
   const termsContainerRef = useRef(null);
   const alphabetRef = useRef([]);
+  const alphabetSidebarRef = useRef(null);
 
   useEffect(() => {
     const allTerms = Object.values(termsData).flat();
@@ -43,6 +44,22 @@ function Glossary() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleTouchStart = (e) => {
+    handleTouchMove(e);
+  };
+
+  const handleTouchMove = (e) => {
+    const touch = e.touches[0];
+    const target = document.elementFromPoint(touch.clientX, touch.clientY);
+    if (target && target.dataset.letter) {
+      scrollToLetter(target.dataset.letter);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    // Nothing to do on touch end for now
   };
 
   const alphabet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'.split('');
@@ -80,9 +97,15 @@ function Glossary() {
           </div>
         ))}
       </div>
-      <div className="alphabet-sidebar">
+      <div
+        className="alphabet-sidebar"
+        ref={alphabetSidebarRef}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         {alphabet.map(letter => (
-          <button key={letter} onClick={() => scrollToLetter(letter)}>
+          <button key={letter} data-letter={letter} onClick={() => scrollToLetter(letter)}>
             {letter}
           </button>
         ))}

@@ -28,7 +28,8 @@
   cursor: pointer;
 }
 
-.alphabet-sidebar button:hover {
+.alphabet-sidebar button:hover,
+.alphabet-sidebar button:active {
   background-color: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
 }
@@ -63,4 +64,15 @@
 
 .glossary-term a:hover {
   color: var(--button-hover-background-color);
+}
+
+.search-input {
+  display: block;
+  width: calc(100% - 40px); /* Adjust width to fit container padding */
+  padding: 10px;
+  margin: 20px auto;
+  background-color: var(--button-background-color);
+  color: var(--text-color);
+  border: 1px solid gray;
+  border-radius: 5px;
 }
