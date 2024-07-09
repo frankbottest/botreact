@@ -63,7 +63,7 @@ function Glossary() {
     }
   };
 
-  const alphabet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'.split('');
+  const alphabet = 'АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЭЮЯ'.split('');
 
   const groupedTerms = filteredTerms.reduce((acc, term) => {
     const firstLetter = term.term.charAt(0).toUpperCase();
@@ -79,7 +79,7 @@ function Glossary() {
       <h1>Словарь</h1>
       <input
         type="text"
-        placeholder="Поиск..."
+        placeholder="Поиск.."
         value={searchTerm}
         onChange={handleSearchChange}
         onKeyPress={handleSearchKeyPress}

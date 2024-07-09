@@ -1,3 +1,6 @@
+@import '../variables.css';
+@import '../global.css';
+
 .learning {
   padding: 20px;
   font-family: 'Montserrat', sans-serif;
@@ -10,18 +13,17 @@
   gap: 20px;
 }
 
-.course {
+.course-button {
   padding: 10px;
-  border: 1px solid gray;
-  border-radius: 5px;
-}
-
-.start-button {
-  display: inline-block;
-  padding: 10px 20px;
   background-color: var(--button-background-color);
   color: var(--button-text-color);
   text-decoration: none;
   border-radius: 5px;
-  margin-top: 10px;
+  text-align: center;
+  border: 1px solid gray;
+}
+
+.course-button:hover {
+  background-color: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
 }
