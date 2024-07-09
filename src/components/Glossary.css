@@ -3,6 +3,7 @@
 
 .glossary {
   padding: 20px 20px 80px 20px;
+  position: relative;
 }
 
 .alphabet-sidebar {
@@ -13,6 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1000;
 }
 
 .alphabet-sidebar button {
@@ -21,7 +23,7 @@
   background-color: transparent;
   color: var(--text-color);
   border: none;
-  font-size: 12px;
+  font-size: 10px;
   cursor: pointer;
 }
 
@@ -71,4 +73,8 @@
   color: var(--text-color);
   border: 1px solid gray;
   border-radius: 5px;
+}
+
+.alphabet-sidebar button.selected {
+  color: var(--menu-item-active-color);
 }

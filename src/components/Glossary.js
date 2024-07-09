@@ -6,6 +6,7 @@ import termsData from '../data/glossary.json';
 function Glossary() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredTerms, setFilteredTerms] = useState([]);
+  const [selectedLetter, setSelectedLetter] = useState('');
   const termsContainerRef = useRef(null);
   const alphabetRef = useRef([]);
   const alphabetSidebarRef = useRef(null);
@@ -39,6 +40,7 @@ function Glossary() {
   };
 
   const scrollToLetter = (letter) => {
+    setSelectedLetter(letter);
     const element = alphabetRef.current[letter];
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -61,7 +63,7 @@ function Glossary() {
     // Nothing to do on touch end for now
   };
 
-  const alphabet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'.split('');
+  const alphabet = 'АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЭЮЯ'.split('');
 
   const groupedTerms = filteredTerms.reduce((acc, term) => {
     const firstLetter = term.term.charAt(0).toUpperCase();
@@ -105,7 +107,12 @@ function Glossary() {
         onTouchEnd={handleTouchEnd}
       >
         {alphabet.map(letter => (
-          <button key={letter} data-letter={letter} onClick={() => scrollToLetter(letter)}>
+          <button
+            key={letter}
+            data-letter={letter}
+            onClick={() => scrollToLetter(letter)}
+            className={selectedLetter === letter ? 'selected' : ''}
+          >
             {letter}
           </button>
         ))}
