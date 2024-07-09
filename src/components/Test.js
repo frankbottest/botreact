@@ -50,6 +50,11 @@ const Test = () => {
   };
 
   const handleNextLesson = () => {
+    const storedProgress = JSON.parse(localStorage.getItem(`completedLessons-${courseId}`)) || [];
+    if (!storedProgress.includes(parseInt(lessonId))) {
+      storedProgress.push(parseInt(lessonId));
+      localStorage.setItem(`completedLessons-${courseId}`, JSON.stringify(storedProgress));
+    }
     navigate(`/learning/courses/${courseId}/lessons/${parseInt(lessonId) + 1}`);
   };
 
