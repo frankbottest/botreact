@@ -2,7 +2,7 @@
 @import '../global.css';
 
 .lesson-list {
-  padding: 20px;
+  padding: 20px 20px 80px 20px; /* Добавление отступа снизу */
   font-family: 'Montserrat', sans-serif;
   color: var(--text-color);
 }
