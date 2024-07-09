@@ -6,9 +6,9 @@ import course2Image from '../assets/course2.png';
 import course3Image from '../assets/course3.png';
 
 const courses = [
-  { id: 1, title: "Основы криптовалют", description: "Изучите базовые понятия и принципы работы криптовалют.", image: course1Image },
-  { id: 2, title: "Продвинутые техники", description: "Углубленные знания и продвинутые техники работы с криптовалютами.", image: course2Image },
-  { id: 3, title: "Торговые стратегии", description: "Освойте эффективные торговые стратегии и тактики.", image: course3Image }
+  { id: 1, title: "Основы криптовалют", description: "Изучите базовые понятия и принципы работы криптовалют.", image: course1Image, label: "Новичок", labelClass: "beginner-label" },
+  { id: 2, title: "Продвинутые техники", description: "Углубленные знания и продвинутые техники работы с криптовалютами.", image: course2Image, label: "Продвинутый", labelClass: "advanced-label" },
+  { id: 3, title: "Торговые стратегии", description: "Освойте эффективные торговые стратегии и тактики.", image: course3Image, label: "Продвинутый", labelClass: "advanced-label" }
 ];
 
 function Learning() {
@@ -24,6 +24,7 @@ function Learning() {
               <h2>{course.title}</h2>
               <p>{course.description}</p>
             </div>
+            <div className={`course-label ${course.labelClass}`}>{course.label}</div>
           </Link>
         ))}
       </div>

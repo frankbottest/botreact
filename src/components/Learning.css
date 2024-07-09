@@ -22,8 +22,8 @@
   text-decoration: none;
   border-radius: 10px;
   border: 1px solid gray;
+  position: relative;
   transition: background-color 0.3s;
-  text-align: left;
 }
 
 .course-button:hover {
@@ -53,4 +53,23 @@
   margin: 5px 0 0;
   font-size: 14px;
   color: var(--text-color-muted);
+}
+
+.course-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.beginner-label {
+  background: linear-gradient(135deg, #006400, #00FF00); /* Градиент от темно-зеленого до зеленого */
+}
+
+.advanced-label {
+  background: linear-gradient(135deg, #FF8C00, #FFA500); /* Градиент от темно-оранжевого до оранжевого */
 }
