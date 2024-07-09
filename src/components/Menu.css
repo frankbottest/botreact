@@ -16,6 +16,8 @@
     color: #d4af37; /* Премиум золото */
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+    transition: color 0.4s;
+    transition-delay: color 0.4s;
   }
   
   .menu-item span {
@@ -25,5 +27,7 @@
   
   .menu-item:hover {
     color: #f0c674;
+    transition: 0.4s;
+    transition-delay: color 0.4s;
   }
   
