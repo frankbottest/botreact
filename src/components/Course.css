@@ -1,0 +1,31 @@
+.course-page {
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+  }
+  
+  .lesson-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .lesson {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+  
+  .lesson.completed {
+    border-color: #4CAF50;
+  }
+  
+  .lesson a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  .lesson.completed a {
+    color: #4CAF50;
+  }
+  

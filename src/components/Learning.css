@@ -1,23 +1,27 @@
 .learning {
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-  }
-  
-  .start-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #1e1e1e;
-    color: white;
-    text-decoration: none;
-    border: 1px solid gray;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .start-button:hover {
-    background-color: #d4af37;
-    color: black;
-  }
-  
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.course {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.start-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}

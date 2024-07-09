@@ -9,7 +9,7 @@ import Article from './components/Article';
 import Glossary from './components/Glossary';
 import Term from './components/Term';
 import Menu from './components/Menu';
-import LessonList from './components/LessonList';
+import Course from './components/Course';
 import Lesson from './components/Lesson';
 import Test from './components/Test';
 import TradingArticles from './components/TradingArticles';
@@ -35,9 +35,9 @@ function App() {
             <Route path="/trading/:section" element={<TradingArticles />} />
             <Route path="/trading/:section/:articleId" element={<TradingArticle />} />
             <Route path="/learning" element={<Learning />} />
-            <Route path="/learning/lessons" element={<LessonList />} />
-            <Route path="/learning/lessons/:lessonId" element={<Lesson />} />
-            <Route path="/learning/lessons/:lessonId/test" element={<Test />} />
+            <Route path="/learning/courses/:courseId" element={<Course />} />
+            <Route path="/learning/courses/:courseId/lessons/:lessonId" element={<Lesson />} />
+            <Route path="/learning/courses/:courseId/lessons/:lessonId/test" element={<Test />} />
             <Route path="/exchanges" element={<Exchanges />} />
             <Route path="/exchanges/:exchange" element={<ExchangeArticles />} />
             <Route path="/exchanges/:exchange/:articleId" element={<Article />} />
