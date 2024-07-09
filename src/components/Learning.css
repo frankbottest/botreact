@@ -13,13 +13,15 @@
 
 .course-button {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: var(--button-background-color);
   border: 1px solid gray;
-  border-radius: 5px;
+  border-radius: 10px; /* Закругленные углы */
   text-decoration: none;
   color: var(--text-color);
-  padding: 10px;
+  padding: 0; /* Убираем отступы */
+  overflow: hidden; /* Скрываем излишки */
 }
 
 .course-button:hover {
@@ -28,25 +30,23 @@
 }
 
 .course-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 5px;
-  margin-right: 20px;
+  width: 100%;
+  height: auto;
+  display: block; /* Изображение сверху без отступов */
 }
 
 .course-text {
-  display: flex;
-  flex-direction: column;
+  padding: 15px; /* Отступы для текста */
   text-align: left;
 }
 
 .course-text h2 {
-  margin: 0;
+  margin: 0 0 10px 0;
   font-size: 18px;
 }
 
 .course-text p {
-  margin: 5px 0 0;
+  margin: 0;
   font-size: 14px;
   color: var(--text-color-muted);
 }
