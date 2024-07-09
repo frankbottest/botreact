@@ -1,31 +1,46 @@
+@import '../variables.css';
+@import '../global.css';
+
 .course-page {
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    color: var(--text-color);
-  }
-  
-  .lesson-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .lesson {
-    padding: 10px;
-    border: 1px solid gray;
-    border-radius: 5px;
-  }
-  
-  .lesson.completed {
-    border-color: #4CAF50;
-  }
-  
-  .lesson a {
-    color: var(--text-color);
-    text-decoration: none;
-  }
-  
-  .lesson.completed a {
-    color: #4CAF50;
-  }
-  
+  padding: 20px 20px 80px 20px; /* Добавляем отступ снизу */
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  text-align: left;
+}
+
+.lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lesson {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.lesson.completed {
+  border-color: #4CAF50;
+}
+
+.lesson a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.lesson.completed a {
+  color: #4CAF50;
+}
+
+.back-button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
+}

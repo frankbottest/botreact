@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import lessons1 from '../data/lessons.json';
 import lessons2 from '../data/lessons2.json';
 import lessons3 from '../data/lessons3.json';
@@ -11,8 +11,15 @@ const lessonsData = {
   3: lessons3
 };
 
+const courseTitles = {
+  1: "Курс 1: Основы криптовалют",
+  2: "Курс 2: Продвинутые техники",
+  3: "Курс 3: Торговые стратегии"
+};
+
 const Course = () => {
   const { courseId } = useParams();
+  const navigate = useNavigate();
   const lessons = lessonsData[courseId];
   const [completedLessons, setCompletedLessons] = useState([]);
 
@@ -29,7 +36,8 @@ const Course = () => {
 
   return (
     <div className="course-page">
-      <h1>{lessons[0].title.split(':')[0]}</h1>
+      <button className="back-button" onClick={() => navigate(-1)}>Назад</button>
+      <h1>{courseTitles[courseId]}</h1>
       <div className="lesson-list">
         {lessons.map((lesson, index) => (
           <div key={lesson.id} className={`lesson ${isLessonCompleted(lesson.id) ? 'completed' : ''}`}>
