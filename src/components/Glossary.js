@@ -8,7 +8,7 @@ function Glossary() {
   const [filteredTerms, setFilteredTerms] = useState([]);
   const [selectedLetter, setSelectedLetter] = useState('');
   const termsContainerRef = useRef(null);
-  const alphabetRef = useRef([]);
+  const alphabetRef = useRef({});
   const alphabetSidebarRef = useRef(null);
 
   useEffect(() => {
@@ -63,7 +63,19 @@ function Glossary() {
     // Nothing to do on touch end for now
   };
 
-  const alphabet = 'АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЭЮЯ'.split('');
+  const handleScroll = () => {
+    const scrollPosition = termsContainerRef.current.scrollTop;
+    const alphabetKeys = Object.keys(alphabetRef.current);
+    for (let i = 0; i < alphabetKeys.length; i++) {
+      const letter = alphabetKeys[i];
+      const element = alphabetRef.current[letter];
+      if (element && element.offsetTop <= scrollPosition + 20) {
+        setSelectedLetter(letter);
+      }
+    }
+  };
+
+  const alphabet = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯ'.split('');
 
   const groupedTerms = filteredTerms.reduce((acc, term) => {
     const firstLetter = term.term.charAt(0).toUpperCase();
@@ -85,7 +97,7 @@ function Glossary() {
         onKeyPress={handleSearchKeyPress}
         className="search-input"
       />
-      <div className="terms" ref={termsContainerRef}>
+      <div className="terms" ref={termsContainerRef} onScroll={handleScroll}>
         {Object.keys(groupedTerms).sort().map(letter => (
           <div key={letter} ref={el => alphabetRef.current[letter] = el}>
             <h2 className="letter-divider">{letter}</h2>

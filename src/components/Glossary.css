@@ -27,9 +27,8 @@
   cursor: pointer;
 }
 
-.alphabet-sidebar button:hover,
-.alphabet-sidebar button:active {
-  color: var(--button-hover-background-color);
+.alphabet-sidebar button.selected {
+  color: var(--menu-item-active-color);
 }
 
 .terms {
@@ -73,8 +72,4 @@
   color: var(--text-color);
   border: 1px solid gray;
   border-radius: 5px;
-}
-
-.alphabet-sidebar button.selected {
-  color: var(--menu-item-active-color);
 }
