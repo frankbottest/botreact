@@ -81,6 +81,7 @@ function Glossary() {
         value={searchTerm}
         onChange={handleSearchChange}
         onKeyPress={handleSearchKeyPress}
+        className="search-input"
       />
       <div className="terms" ref={termsContainerRef}>
         {Object.keys(groupedTerms).sort().map(letter => (
