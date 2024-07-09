@@ -25,7 +25,7 @@
 }
 
 .course-button:hover {
-  background-color: var(--button-hover-background-color);
+  background-color: #9c95950f;
   color: var(--button-hover-text-color);
 }
 
