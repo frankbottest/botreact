@@ -5,48 +5,67 @@
   padding: 20px 20px 80px 20px;
 }
 
-.course-list {
+.sections {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.course-item {
+.section-button {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: var(--button-background-color);
-  border: 1px solid gray;
-  border-radius: 5px;
+  border-radius: 10px; /* Закругленные углы */
   text-decoration: none;
   color: var(--text-color);
-  padding: 10px;
+  padding: 0; /* Убираем отступы */
+  overflow: hidden; /* Скрываем излишки */
+  position: relative;
+  text-align: left;
 }
 
-.course-item:hover {
+.section-button:hover {
   background-color: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
 }
 
-.course-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 5px;
-  margin-right: 20px;
+.section-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-.course-content {
-  display: flex;
-  flex-direction: column;
+.section-image-wrapper::before {
+  position: absolute;
+  top: -50%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
+  content: "";
+  background: radial-gradient(transparent, rgba(26, 24, 31, .5) 40%, #1e1e1e 70%);
+  transition: background .15s ease-in-out;
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Изображение сверху без отступов */
+}
+
+.section-text {
+  padding: 15px; /* Отступы для текста */
   text-align: left;
+  width: 100%;
 }
 
-.course-content h2 {
-  margin: 0;
+.section-text h2 {
+  margin: 0 0 10px 0;
   font-size: 18px;
 }
 
-.course-content p {
-  margin: 5px 0 0;
+.section-text p {
+  margin: 0;
   font-size: 14px;
   color: var(--text-color-muted);
 }

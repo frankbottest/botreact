@@ -5,33 +5,29 @@ import patternsImage from '../assets/patterns.png';
 import candlesImage from '../assets/candles.png';
 import strategiesImage from '../assets/strategies.png';
 
+const sections = [
+  { id: 'patterns', title: "Паттерны", description: "Изучите различные графические паттерны для успешного трейдинга.", image: patternsImage },
+  { id: 'candles', title: "Свечи", description: "Понимание свечных графиков и их использование в трейдинге.", image: candlesImage },
+  { id: 'strategies', title: "Стратегии", description: "Различные стратегии для успешной торговли криптовалютами.", image: strategiesImage }
+];
+
 function Trading() {
   return (
     <div className="trading">
       <h1>Трейдинг</h1>
       <p>Изучите различные аспекты трейдинга, включая паттерны, свечи и стратегии.</p>
-      <div className="course-list">
-        <Link to="/trading/patterns" className="course-item">
-          <img src={patternsImage} alt="Паттерны" className="course-image" />
-          <div className="course-content">
-            <h2>Паттерны</h2>
-            <p>Изучите различные графические паттерны для успешного трейдинга.</p>
-          </div>
-        </Link>
-        <Link to="/trading/candles" className="course-item">
-          <img src={candlesImage} alt="Свечи" className="course-image" />
-          <div className="course-content">
-            <h2>Свечи</h2>
-            <p>Понимание свечных графиков и их использование в трейдинге.</p>
-          </div>
-        </Link>
-        <Link to="/trading/strategies" className="course-item">
-          <img src={strategiesImage} alt="Стратегии" className="course-image" />
-          <div className="course-content">
-            <h2>Стратегии</h2>
-            <p>Различные стратегии для успешной торговли криптовалютами.</p>
-          </div>
-        </Link>
+      <div className="sections">
+        {sections.map(section => (
+          <Link key={section.id} to={`/trading/${section.id}`} className="section-button">
+            <div className="section-image-wrapper">
+              <img src={section.image} alt={section.title} className="section-image" />
+            </div>
+            <div className="section-text">
+              <h2>{section.title}</h2>
+              <p>{section.description}</p>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
