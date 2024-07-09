@@ -5,19 +5,15 @@ import termsData from '../data/glossary.json';
 
 function Glossary() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedLetter, setSelectedLetter] = useState('');
   const [filteredTerms, setFilteredTerms] = useState([]);
   const location = useLocation();
   const termsContainerRef = useRef(null);
+  const alphabetRef = useRef([]);
 
   useEffect(() => {
-    if (selectedLetter) {
-      setFilteredTerms(termsData[selectedLetter] || []);
-    } else {
-      const allTerms = Object.values(termsData).flat();
-      setFilteredTerms(allTerms);
-    }
-  }, [selectedLetter]);
+    const allTerms = Object.values(termsData).flat();
+    setFilteredTerms(allTerms);
+  }, []);
 
   useEffect(() => {
     if (searchTerm) {
@@ -25,24 +21,14 @@ function Glossary() {
       setFilteredTerms(
         allTerms.filter(term => term.term.toLowerCase().includes(searchTerm.toLowerCase()))
       );
+    } else {
+      const allTerms = Object.values(termsData).flat();
+      setFilteredTerms(allTerms);
     }
   }, [searchTerm]);
 
-  useEffect(() => {
-    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
-    if (savedScrollPosition && termsContainerRef.current) {
-      termsContainerRef.current.scrollTop = savedScrollPosition;
-    }
-  }, [location]);
-
-  const handleLetterClick = (letter) => {
-    setSelectedLetter(letter);
-    setSearchTerm('');
-  };
-
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
-    setSelectedLetter('');
   };
 
   const handleSearchKeyPress = (e) => {
@@ -52,18 +38,14 @@ function Glossary() {
     }
   };
 
-  const handleReset = () => {
-    setSelectedLetter('');
-    setSearchTerm('');
-  };
-
-  const handleLinkClick = () => {
-    if (termsContainerRef.current) {
-      sessionStorage.setItem('scrollPosition', termsContainerRef.current.scrollTop);
+  const scrollToLetter = (letter) => {
+    const element = alphabetRef.current[letter];
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const alphabet = 'АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЭЮЯ'.split('');
+  const alphabet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'.split('');
 
   const groupedTerms = filteredTerms.reduce((acc, term) => {
     const firstLetter = term.term.charAt(0).toUpperCase();
@@ -79,32 +61,30 @@ function Glossary() {
       <h1>Словарь</h1>
       <input
         type="text"
-        placeholder="Поиск.."
+        placeholder="Поиск..."
         value={searchTerm}
         onChange={handleSearchChange}
         onKeyPress={handleSearchKeyPress}
-        className="search-input"
       />
-      <div className="alphabet">
-        {alphabet.map(letter => (
-          <button key={letter} onClick={() => handleLetterClick(letter)}>
-            {letter}
-          </button>
-        ))}
-        <button onClick={handleReset}>Сброс</button>
-      </div>
       <div className="terms" ref={termsContainerRef}>
         {Object.keys(groupedTerms).sort().map(letter => (
-          <div key={letter}>
+          <div key={letter} ref={el => alphabetRef.current[letter] = el}>
             <h2 className="letter-divider">{letter}</h2>
             <div className="term-list">
               {groupedTerms[letter].map((term, index) => (
                 <div key={index} className="glossary-term">
-                  <Link to={`/glossary/${term.id}`} onClick={handleLinkClick}>{term.term}</Link>
+                  <Link to={`/glossary/${term.id}`}>{term.term}</Link>
                 </div>
               ))}
             </div>
           </div>
+        ))}
+      </div>
+      <div className="alphabet-sidebar">
+        {alphabet.map(letter => (
+          <button key={letter} onClick={() => scrollToLetter(letter)}>
+            {letter}
+          </button>
         ))}
       </div>
     </div>
