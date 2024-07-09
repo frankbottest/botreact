@@ -19,7 +19,9 @@ function Learning() {
       <div className="courses">
         {courses.map(course => (
           <Link key={course.id} to={`/learning/courses/${course.id}`} className="course-button">
-            <img src={course.image} alt={course.title} className="course-image" />
+            <div className="course-image-wrapper">
+              <img src={course.image} alt={course.title} className="course-image" />
+            </div>
             <div className="course-text">
               <h2>{course.title}</h2>
               <p>{course.description}</p>

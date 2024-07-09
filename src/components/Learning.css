@@ -16,17 +16,34 @@
   flex-direction: column;
   align-items: flex-start;
   background-color: var(--button-background-color);
-  border: 1px solid gray;
   border-radius: 10px; /* Закругленные углы */
   text-decoration: none;
   color: var(--text-color);
   padding: 0; /* Убираем отступы */
   overflow: hidden; /* Скрываем излишки */
+  position: relative;
 }
 
 .course-button:hover {
   background-color: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
+}
+
+.course-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.course-image-wrapper::before {
+  position: absolute;
+  top: -50%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
+  content: "";
+  background: radial-gradient(transparent, rgba(26, 24, 31, .5) 40%, #1e1e1e 70%);
+  transition: background .15s ease-in-out;
 }
 
 .course-image {
@@ -38,6 +55,7 @@
 .course-text {
   padding: 15px; /* Отступы для текста */
   text-align: left;
+  width: 100%;
 }
 
 .course-text h2 {
