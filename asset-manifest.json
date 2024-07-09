@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/botreact/static/css/main.74b8012d.css",
+    "main.css": "/botreact/static/css/main.6ec6a562.css",
     "main.js": "/botreact/static/js/main.baa8e830.js",
     "static/js/453.afd2f2a8.chunk.js": "/botreact/static/js/453.afd2f2a8.chunk.js",
     "static/media/course3.png": "/botreact/static/media/course3.cb8548fa1a0857d2c3dc.png",
@@ -16,12 +16,12 @@
     "static/media/strategy1.png": "/botreact/static/media/strategy1.a23a09288f7c28dc82f1.png",
     "static/media/candle2.png": "/botreact/static/media/candle2.b0816265da6c16573a73.png",
     "index.html": "/botreact/index.html",
-    "main.74b8012d.css.map": "/botreact/static/css/main.74b8012d.css.map",
+    "main.6ec6a562.css.map": "/botreact/static/css/main.6ec6a562.css.map",
     "main.baa8e830.js.map": "/botreact/static/js/main.baa8e830.js.map",
     "453.afd2f2a8.chunk.js.map": "/botreact/static/js/453.afd2f2a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.74b8012d.css",
+    "static/css/main.6ec6a562.css",
     "static/js/main.baa8e830.js"
   ]
 }
