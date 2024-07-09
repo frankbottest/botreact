@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/botreact/static/css/main.70259660.css",
-    "main.js": "/botreact/static/js/main.02f34162.js",
+    "main.css": "/botreact/static/css/main.d251a383.css",
+    "main.js": "/botreact/static/js/main.3b199997.js",
     "static/js/453.afd2f2a8.chunk.js": "/botreact/static/js/453.afd2f2a8.chunk.js",
-    "static/media/course3.png": "/botreact/static/media/course3.cb8548fa1a0857d2c3dc.png",
-    "static/media/strategies.png": "/botreact/static/media/strategies.21ccbaa407b65dbe664d.png",
-    "static/media/course2.png": "/botreact/static/media/course2.1582ddc4f8c393dfd70d.png",
-    "static/media/candles.png": "/botreact/static/media/candles.ecff9579d8af2e510e1e.png",
-    "static/media/course4.png": "/botreact/static/media/course4.c404f3a5a1f8397f57f8.png",
-    "static/media/patterns.png": "/botreact/static/media/patterns.16d9001f7bf6da023314.png",
+    "static/media/course3.png": "/botreact/static/media/course3.37e1bed057083ad32a76.png",
     "static/media/course1.png": "/botreact/static/media/course1.6ad4c65881d18e4bab14.png",
+    "static/media/strategies.png": "/botreact/static/media/strategies.3a49a7f56023e154fb95.png",
+    "static/media/candles.png": "/botreact/static/media/candles.9374fa0b9c72cecba371.png",
+    "static/media/patterns.png": "/botreact/static/media/patterns.c2ef8bb53c39a2202156.png",
+    "static/media/course2.png": "/botreact/static/media/course2.1ff4588df722aa0d45d2.png",
     "static/media/candle1.png": "/botreact/static/media/candle1.f5ee8f936f8b578989aa.png",
     "static/media/pattern1.png": "/botreact/static/media/pattern1.b109862c66028ec38fc3.png",
     "static/media/strategy2.png": "/botreact/static/media/strategy2.b109862c66028ec38fc3.png",
@@ -17,12 +16,12 @@
     "static/media/strategy1.png": "/botreact/static/media/strategy1.a23a09288f7c28dc82f1.png",
     "static/media/candle2.png": "/botreact/static/media/candle2.b0816265da6c16573a73.png",
     "index.html": "/botreact/index.html",
-    "main.70259660.css.map": "/botreact/static/css/main.70259660.css.map",
-    "main.02f34162.js.map": "/botreact/static/js/main.02f34162.js.map",
+    "main.d251a383.css.map": "/botreact/static/css/main.d251a383.css.map",
+    "main.3b199997.js.map": "/botreact/static/js/main.3b199997.js.map",
     "453.afd2f2a8.chunk.js.map": "/botreact/static/js/453.afd2f2a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.70259660.css",
-    "static/js/main.02f34162.js"
+    "static/css/main.d251a383.css",
+    "static/js/main.3b199997.js"
   ]
 }
