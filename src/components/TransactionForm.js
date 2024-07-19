@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function TransactionForm({ onVerified }) {
   const [txid, setTxid] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,6 +20,7 @@ function TransactionForm({ onVerified }) {
       .then((data) => {
         if (data.success) {
           onVerified();
+          navigate('/');
         } else {
           setError(data.message);
         }
