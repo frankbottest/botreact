@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/botreact/static/css/main.ca332bb6.css",
-    "main.js": "/botreact/static/js/main.5b87bcc5.js",
+    "main.js": "/botreact/static/js/main.b014d93a.js",
     "static/js/453.afd2f2a8.chunk.js": "/botreact/static/js/453.afd2f2a8.chunk.js",
     "static/media/course3.png": "/botreact/static/media/course3.37e1bed057083ad32a76.png",
     "static/media/course1.png": "/botreact/static/media/course1.6ad4c65881d18e4bab14.png",
@@ -17,11 +17,11 @@
     "static/media/candle2.png": "/botreact/static/media/candle2.b0816265da6c16573a73.png",
     "index.html": "/botreact/index.html",
     "main.ca332bb6.css.map": "/botreact/static/css/main.ca332bb6.css.map",
-    "main.5b87bcc5.js.map": "/botreact/static/js/main.5b87bcc5.js.map",
+    "main.b014d93a.js.map": "/botreact/static/js/main.b014d93a.js.map",
     "453.afd2f2a8.chunk.js.map": "/botreact/static/js/453.afd2f2a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca332bb6.css",
-    "static/js/main.5b87bcc5.js"
+    "static/js/main.b014d93a.js"
   ]
 }
